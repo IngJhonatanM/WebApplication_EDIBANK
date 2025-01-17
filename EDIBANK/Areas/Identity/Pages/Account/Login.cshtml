@@ -1,0 +1,51 @@
+﻿@page "/Account/Login"
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="wrapper d-flex justify-content-between">
+    <a class="d-flex align-items-center justify-content-center text-white text-decoration-none" href="/">
+        <img alt="Logo" class="img-fluid img-thumbnail m-auto pt-sm-2" src="~/images/arasaka.png" style="height: 431px; width: 398.7;" />
+    </a>
+
+    <v class="col-md-4 mx-auto rounded border p-3">
+        <section>
+            <h2 class="item d-flex flex-column">Iniciar Sesión</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <form id="account" method="post">
+
+                <div class="mb-3">
+
+                    <label class="form-label">Email</label>
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" placeholder="Email@dominio.com" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">Contraseña</label>
+                    <input asp-for="Input.Password" class="form-control" placeholder="⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎⁎" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+                </div>
+
+                <div class=" row mb-3">
+                    <div class="col d-grid">
+
+                        <button type="submit" class="btn btn-secondary border border-light text-black">Ingresar</button>
+                        <!--  <a> <button type="submit" class="btn btn-secondary  btn-sm border border-light text-black"><strong>Ingresar </strong></button>  </a>       -->
+
+                    </div>
+                </div>
+
+                <div>
+                    <a id="forgot-password" class="link-dark" asp-page="./ForgotPassword"><small>¿Olvidó su contraseña?</small></a>
+                </div>
+            </form>
+        </section>
+</div>
