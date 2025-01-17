@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="es-ve">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - EDIB@NK</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/_StylesLogin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EDIBANK.styles.css" asp-append-version="true" />
+    <link rel="icon" type="image/x-icon" href="~/icons8-pentagon-windows-10-32.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <!--   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                          aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>  -->
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <a class="link-dark" asp-area="" asp-controller="Monitor" asp-action="Intercambios">EDIB@NK</a>
+    <!--<a href="/Home/Entrada" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"><h1>EDIB@NK</h1></a>-->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - WebApplication_EDIB@NK - <a class="link-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contacto</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
